@@ -140,7 +140,7 @@ export default function ContactSection() {
       <section
         ref={sectionRef}
         id="contact"
-        className="scroll-mt-36 relative overflow-hidden bg-[#050505] py-24 md:py-32"
+        className="scroll-mt-32 relative overflow-hidden bg-[#050505] py-16 sm:py-20 md:py-32"
       >
         <div
           className="pointer-events-none absolute inset-0"
@@ -162,22 +162,24 @@ export default function ContactSection() {
         </svg>
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-16">
-          <div className="grid items-start gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
+          <div className="grid items-start gap-10 sm:gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
             <div className="space-y-8">
               <div className={`contact-reveal flex items-center gap-3 ${inView ? "in" : ""}`}>
                 <span className="h-px w-9 bg-[#D4AF37]" />
-                <span className="text-[11px] font-medium uppercase tracking-[0.35em] text-[#D4AF37]">Contact</span>
+                <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.32em] text-[#D4AF37]">
+                  Contact
+                </span>
               </div>
 
               <div className={`contact-reveal space-y-5 ${inView ? "in" : ""}`} style={{ transitionDelay: "0.12s" }}>
-                <h2 className="max-w-3xl font-serif text-4xl font-light leading-[1.04] text-white md:text-5xl lg:text-6xl">
+                <h2 className="max-w-3xl font-serif text-3xl font-light leading-[1.04] text-white sm:text-4xl md:text-5xl lg:text-6xl">
                   Organisons votre
                   <br />
                   prochaine <em className="font-semibold italic text-[#D4AF37]">experience</em>
                   <br />
                   automobile.
                 </h2>
-                <p className="max-w-xl text-[15px] leading-7 text-white/55 md:text-base">
+                <p className="max-w-xl text-xs sm:text-[15px] leading-6 sm:leading-7 text-white/55 md:text-base">
                   Reponse rapide, service discret et livraison flexible pour chaque reservation.
                 </p>
               </div>
@@ -195,24 +197,26 @@ export default function ContactSection() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-[22px] border border-[#D4AF37]/16 bg-[#D4AF37]/[0.05] px-5 py-5"
+                    className="rounded-[20px] border border-[#D4AF37]/16 bg-[#D4AF37]/[0.05] px-4 py-4 sm:px-5 sm:py-5"
                   >
-                    <div className="mb-2 text-[11px] uppercase tracking-[0.28em] text-[#D4AF37]/80">{item.label}</div>
-                    <div className="font-serif text-2xl text-white">{item.value}</div>
+                    <div className="mb-2 text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-[#D4AF37]/80">
+                      {item.label}
+                    </div>
+                    <div className="font-serif text-xl sm:text-2xl text-white">{item.value}</div>
                   </div>
                 ))}
               </div>
 
               <div
-                className={`contact-reveal rounded-[30px] border border-white/10 bg-white/[0.03] p-6 sm:p-8 ${inView ? "in" : ""}`}
+                className={`contact-reveal rounded-[28px] border border-white/10 bg-white/[0.03] p-5 sm:p-8 ${inView ? "in" : ""}`}
                 style={{ transitionDelay: "0.42s" }}
               >
-                <div className="mb-3 flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.3em] text-[#D4AF37]">
+                <div className="mb-3 flex items-center gap-2 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.28em] text-[#D4AF37]">
                   <Sparkles className="h-4 w-4" />
                   <span>Service Signature</span>
                 </div>
 
-                <p className="mb-6 max-w-2xl text-sm leading-6 text-white/62 sm:text-[15px]">
+                <p className="mb-6 max-w-2xl text-xs sm:text-[15px] leading-6 text-white/62">
                   Conseil, confirmation rapide et coordination simple.
                 </p>
 
@@ -220,7 +224,7 @@ export default function ContactSection() {
                   {serviceHighlights.map((item) => (
                     <div
                       key={item}
-                      className="flex items-center gap-3 rounded-2xl border border-white/8 bg-black/30 px-4 py-4 text-sm text-white/68"
+                      className="flex items-center gap-3 rounded-2xl border border-white/8 bg-black/30 px-4 py-3 text-xs sm:text-sm text-white/68"
                     >
                       <ShieldCheck className="h-4 w-4 shrink-0 text-[#D4AF37]" />
                       <span>{item}</span>
@@ -233,15 +237,15 @@ export default function ContactSection() {
                     size="large"
                     text="Reserver sur WhatsApp"
                     message="Bonjour, je souhaite reserver une voiture de prestige."
-                    className="rounded-full px-8 py-4 text-sm uppercase tracking-[0.14em] sm:w-auto"
+                    className="rounded-full px-6 py-3 text-xs sm:text-sm uppercase tracking-[0.14em] sm:w-auto sm:px-8 sm:py-4"
                   />
 
                   <a
                     href="mailto:manhattanluxecar@outlook.com"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/12 px-6 py-4 text-sm uppercase tracking-[0.14em] text-white/78 transition-all duration-300 hover:border-[#D4AF37]/40 hover:text-white"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/12 px-5 py-3 text-xs sm:text-sm uppercase tracking-[0.14em] text-white/78 transition-all duration-300 hover:border-[#D4AF37]/40 hover:text-white sm:px-6 sm:py-4"
                   >
                     <span>Envoyer un email</span>
-                    <ArrowUpRight className="h-4 w-4 text-[#D4AF37]" />
+                    <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#D4AF37]" />
                   </a>
                 </div>
               </div>
@@ -257,42 +261,44 @@ export default function ContactSection() {
                     href={card.href}
                     target={card.href.startsWith("http") ? "_blank" : undefined}
                     rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className={`contact-card contact-reveal block rounded-[28px] p-6 sm:p-7 ${inView ? "in" : ""}`}
+                    className={`contact-card contact-reveal block rounded-[26px] p-5 sm:p-7 ${inView ? "in" : ""}`}
                     style={{ transitionDelay: `${0.22 + index * 0.08}s` }}
                   >
                     <div className="relative z-10 flex items-start gap-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#D4AF37]/20 bg-[#D4AF37]/10">
-                        <Icon className="h-6 w-6 text-[#D4AF37]" />
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#D4AF37]/20 bg-[#D4AF37]/10 sm:h-14 sm:w-14">
+                        <Icon className="h-5 w-5 text-[#D4AF37] sm:h-6 sm:w-6" />
                       </div>
                       <div className="min-w-0 flex-1">
-                        <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.3em] text-[#D4AF37]/85">
+                        <div className="mb-2 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.28em] text-[#D4AF37]/85">
                           {card.title}
                         </div>
-                        <div className="break-words font-serif text-2xl leading-tight text-white">{card.value}</div>
-                        <p className="mt-3 text-sm leading-6 text-white/55">{card.description}</p>
+                        <div className="break-words font-serif text-xl sm:text-2xl leading-tight text-white">
+                          {card.value}
+                        </div>
+                        <p className="mt-3 text-xs sm:text-sm leading-6 text-white/55">{card.description}</p>
                       </div>
-                      <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-[#D4AF37]" />
+                      <ArrowUpRight className="mt-1 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-[#D4AF37]" />
                     </div>
                   </a>
                 )
               })}
 
               <div
-                className={`contact-reveal rounded-[28px] border border-[#D4AF37]/16 bg-[#D4AF37]/[0.05] p-6 sm:p-7 ${inView ? "in" : ""}`}
+                className={`contact-reveal rounded-[26px] border border-[#D4AF37]/16 bg-[#D4AF37]/[0.05] p-5 sm:p-7 ${inView ? "in" : ""}`}
                 style={{ transitionDelay: "0.5s" }}
               >
-                <div className="mb-3 flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.3em] text-[#D4AF37]">
+                <div className="mb-3 flex items-center gap-2 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.28em] text-[#D4AF37]">
                   <Clock3 className="h-4 w-4" />
                   <span>Conciergerie Disponible</span>
                 </div>
-                <p className="mb-5 text-sm leading-6 text-white/62">
+                <p className="mb-5 text-xs sm:text-sm leading-6 text-white/62">
                   Recommandation rapide et assistance sans attente.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {["Business", "Mariage", "Sejour", "Longue duree"].map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-white/10 px-3 py-2 text-[11px] uppercase tracking-[0.24em] text-white/62"
+                      className="rounded-full border border-white/10 px-3 py-2 text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-white/62"
                     >
                       {item}
                     </span>

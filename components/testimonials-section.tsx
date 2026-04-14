@@ -100,7 +100,7 @@ export default function TestimonialsSection() {
 
         .quote-mark {
           font-family: 'Cormorant Garamond', serif;
-          font-size: 120px;
+          font-size: 90px;
           font-weight: 700;
           line-height: 0.7;
           color: rgba(212,175,55,0.08);
@@ -162,19 +162,19 @@ export default function TestimonialsSection() {
           <circle cx="1200" cy="0" r="300" fill="none" stroke="#D4AF37" strokeWidth="0.5" opacity="0.05" />
         </svg>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-24 lg:py-32">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-16 sm:py-20 lg:py-28">
           {/* Header */}
           <div className={`testi-reveal ${inView ? 'in' : ''} mb-16`}>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-5">
               <span style={{ display: 'inline-block', width: '36px', height: '0.5px', background: '#D4AF37' }} />
-              <span style={{ fontSize: '11px', letterSpacing: '0.35em', color: '#D4AF37', fontWeight: 500, textTransform: 'uppercase' }}>
+              <span style={{ fontSize: '10px', letterSpacing: '0.32em', color: '#D4AF37', fontWeight: 500, textTransform: 'uppercase' }}>
                 Témoignages
               </span>
             </div>
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
               <h2 style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 'clamp(2.2rem, 4vw, 3.8rem)',
+                fontSize: 'clamp(2rem, 4vw, 3.4rem)',
                 fontWeight: 300,
                 color: '#fff',
                 letterSpacing: '-0.01em',
@@ -203,7 +203,7 @@ export default function TestimonialsSection() {
                 background: 'rgba(212,175,55,0.04)',
                 border: '0.5px solid rgba(212,175,55,0.2)',
                 borderRadius: '2px',
-                padding: 'clamp(2rem, 4vw, 3.5rem)',
+                padding: 'clamp(1.5rem, 4vw, 3rem)',
                 position: 'relative',
                 overflow: 'hidden',
               }}
@@ -213,9 +213,9 @@ export default function TestimonialsSection() {
 
               <div className="relative z-10">
                 {/* Stars */}
-                <div style={{ display: 'flex', gap: '4px', marginBottom: '24px' }}>
+                <div style={{ display: 'flex', gap: '4px', marginBottom: '20px' }}>
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} viewBox="0 0 24 24" style={{ width: '18px', height: '18px' }}>
+                    <svg key={i} viewBox="0 0 24 24" style={{ width: '16px', height: '16px' }}>
                       <path className="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   ))}
@@ -226,12 +226,12 @@ export default function TestimonialsSection() {
                   key={active}
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: 'clamp(1.1rem, 2.5vw, 1.6rem)',
+                    fontSize: 'clamp(1rem, 2.4vw, 1.5rem)',
                     fontWeight: 300,
                     fontStyle: 'italic',
                     color: 'rgba(255,255,255,0.8)',
                     lineHeight: 1.7,
-                    marginBottom: '32px',
+                    marginBottom: '24px',
                     animation: 'fadeIn 0.5s ease',
                   }}
                 >
@@ -240,7 +240,7 @@ export default function TestimonialsSection() {
 
                 {/* Author */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                  <div className="testi-avatar-ring" style={{ position: 'relative', width: '52px', height: '52px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
+                  <div className="testi-avatar-ring" style={{ position: 'relative', width: '44px', height: '44px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
                     <Image
                       src={testimonials[active].avatar || "/placeholder.svg"}
                       alt={testimonials[active].name}
@@ -249,10 +249,10 @@ export default function TestimonialsSection() {
                     />
                   </div>
                   <div>
-                    <p style={{ fontWeight: 500, color: '#fff', fontSize: '15px', marginBottom: '2px' }}>
+                    <p style={{ fontWeight: 500, color: '#fff', fontSize: '14px', marginBottom: '2px' }}>
                       {testimonials[active].name}
                     </p>
-                    <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', fontWeight: 300 }}>
+                    <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)', fontWeight: 300 }}>
                       {testimonials[active].role} · {testimonials[active].location}
                     </p>
                   </div>
@@ -270,18 +270,18 @@ export default function TestimonialsSection() {
                 style={{ transitionDelay: `${0.25 + i * 0.1}s` }}
                 onClick={() => setActive(i)}
               >
-                <div style={{ padding: '1.75rem' }}>
+                <div style={{ padding: '1.5rem' }}>
                   {/* Stars */}
                   <div style={{ display: 'flex', gap: '3px', marginBottom: '14px' }}>
                     {[...Array(t.rating)].map((_, j) => (
-                      <svg key={j} viewBox="0 0 24 24" style={{ width: '13px', height: '13px' }}>
-                        <path className="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                      </svg>
-                    ))}
-                  </div>
+                    <svg key={j} viewBox="0 0 24 24" style={{ width: '12px', height: '12px' }}>
+                      <path className="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  ))}
+                </div>
 
                   <p style={{
-                    fontSize: '13px',
+                    fontSize: '12px',
                     color: 'rgba(255,255,255,0.45)',
                     fontWeight: 300,
                     lineHeight: 1.7,
@@ -296,8 +296,8 @@ export default function TestimonialsSection() {
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                     <div style={{
-                      width: '36px',
-                      height: '36px',
+                      width: '32px',
+                      height: '32px',
                       borderRadius: '50%',
                       background: 'rgba(212,175,55,0.12)',
                       border: `0.5px solid ${active === i ? '#D4AF37' : 'rgba(212,175,55,0.2)'}`,
@@ -305,7 +305,7 @@ export default function TestimonialsSection() {
                       alignItems: 'center',
                       justifyContent: 'center',
                       flexShrink: 0,
-                      fontSize: '11px',
+                      fontSize: '10px',
                       fontWeight: 600,
                       color: '#D4AF37',
                       letterSpacing: '0.05em',
@@ -314,8 +314,8 @@ export default function TestimonialsSection() {
                       {t.initial}
                     </div>
                     <div>
-                      <p style={{ fontSize: '13px', fontWeight: 500, color: '#fff' }}>{t.name}</p>
-                      <p style={{ fontSize: '11px', color: 'rgba(255,255,255,0.35)', fontWeight: 300 }}>{t.role}</p>
+                      <p style={{ fontSize: '12px', fontWeight: 500, color: '#fff' }}>{t.name}</p>
+                      <p style={{ fontSize: '10px', color: 'rgba(255,255,255,0.35)', fontWeight: 300 }}>{t.role}</p>
                     </div>
                   </div>
                 </div>

@@ -177,7 +177,7 @@ function ImageCarousel({ images, alt }: { images: string[]; alt: string }) {
   }, [images.length])
 
   return (
-    <div className="relative h-56 md:h-64 overflow-hidden">
+    <div className="relative h-44 sm:h-52 md:h-64 overflow-hidden">
       {images.map((image, index) => (
         <Image
           key={index}
@@ -213,7 +213,7 @@ export default function FleetSection() {
   return (
     <section
       id="fleet"
-      className="scroll-mt-36 py-24 md:py-32 bg-gradient-to-b from-background via-background to-black/50 relative overflow-hidden"
+      className="scroll-mt-32 py-16 sm:py-20 md:py-28 bg-gradient-to-b from-background via-background to-black/50 relative overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl" />
@@ -221,28 +221,28 @@ export default function FleetSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-6 mb-20">
-          <div className="inline-flex items-center gap-3 px-6 py-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full">
+        <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full">
             <Sparkles className="w-4 h-4 text-[#D4AF37]" />
-            <span className="text-[#D4AF37] text-sm font-semibold tracking-[0.2em] uppercase">
+            <span className="text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase">
               Notre Flotte Exclusive
             </span>
             <Sparkles className="w-4 h-4 text-[#D4AF37]" />
           </div>
 
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
             Vehicules <span className="text-[#D4AF37]">Premium</span> 2025
           </h2>
 
           <div className="flex items-center justify-center gap-3 pt-2">
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#D4AF37]" />
             <Palette className="w-5 h-5 text-[#D4AF37]" />
-            <span className="text-sm font-medium text-[#D4AF37]">Toutes disponibles en plusieurs couleurs</span>
+            <span className="text-xs sm:text-sm font-medium text-[#D4AF37]">Toutes disponibles en plusieurs couleurs</span>
             <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#D4AF37]" />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-[1600px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-[1600px] mx-auto">
           {vehicles.map((vehicle, index) => (
             <div
               key={index}
@@ -268,12 +268,12 @@ export default function FleetSection() {
                 </span>
               </div>
 
-              <div className="p-5 space-y-4 relative z-10">
+              <div className="p-4 sm:p-5 space-y-4 relative z-10">
                 <div className="space-y-2">
-                  <h3 className="font-serif text-lg font-bold text-foreground group-hover:text-[#D4AF37] transition-colors duration-300 line-clamp-1">
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-foreground group-hover:text-[#D4AF37] transition-colors duration-300 line-clamp-1">
                     {vehicle.name}
                   </h3>
-                  <p className="text-muted-foreground text-sm line-clamp-2 group-hover:text-zinc-400 transition-colors duration-300">
+                  <p className="text-muted-foreground text-xs sm:text-sm line-clamp-2 group-hover:text-zinc-400 transition-colors duration-300">
                     {vehicle.description}
                   </p>
                 </div>
@@ -294,7 +294,7 @@ export default function FleetSection() {
                 <WhatsAppButton
                   text="Demander le prix"
                   message={`Bonjour, je souhaite connaitre le prix et la disponibilite de la ${vehicle.name}.`}
-                  className="w-full justify-center text-sm py-3 bg-transparent border-2 border-zinc-700 text-foreground hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] group-hover:border-[#D4AF37]/50 transition-all duration-300 rounded-xl font-semibold"
+                  className="w-full justify-center text-xs sm:text-sm py-2.5 sm:py-3 bg-transparent border-2 border-zinc-700 text-foreground hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] group-hover:border-[#D4AF37]/50 transition-all duration-300 rounded-xl font-semibold"
                   variant="outline"
                 />
               </div>
@@ -302,12 +302,12 @@ export default function FleetSection() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <p className="text-zinc-500 text-sm mb-4">Vous ne trouvez pas ce que vous cherchez ?</p>
+        <div className="mt-12 sm:mt-16 text-center">
+          <p className="text-zinc-500 text-xs sm:text-sm mb-4">Vous ne trouvez pas ce que vous cherchez ?</p>
           <WhatsAppButton
             text="Contactez-nous pour plus d'options"
             message="Bonjour, je cherche une voiture specifique. Pouvez-vous m'aider ?"
-            className="inline-flex px-8 py-4 bg-[#D4AF37] text-black font-bold rounded-full hover:bg-[#C9A227] transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+            className="inline-flex px-6 py-3 text-sm bg-[#D4AF37] text-black font-bold rounded-full hover:bg-[#C9A227] transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] sm:px-8 sm:py-4"
           />
         </div>
       </div>

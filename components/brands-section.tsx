@@ -215,7 +215,7 @@ export default function BrandsSection() {
         }
       `}</style>
 
-      <section ref={ref} className="relative overflow-hidden bg-[#030303] py-24 md:py-28">
+      <section ref={ref} className="relative overflow-hidden bg-[#030303] py-16 sm:py-20 md:py-28">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -236,21 +236,21 @@ export default function BrandsSection() {
         </svg>
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-16">
-          <div className={`brands-reveal mb-16 text-center ${inView ? "in" : ""}`}>
-            <div className="mb-6 flex items-center justify-center gap-4">
-              <Sparkles className="brands-sparkle h-7 w-7 text-[#D4AF37]" />
-              <h2 className="font-serif text-4xl font-semibold leading-none text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <div className={`brands-reveal mb-12 sm:mb-16 text-center ${inView ? "in" : ""}`}>
+            <div className="mb-4 sm:mb-6 flex items-center justify-center gap-3 sm:gap-4">
+              <Sparkles className="brands-sparkle h-5 w-5 sm:h-7 sm:w-7 text-[#D4AF37]" />
+              <h2 className="font-serif text-3xl font-semibold leading-none text-white sm:text-4xl md:text-5xl lg:text-6xl">
                 NOS MARQUES <span className="brands-title-shimmer">PREMIUM</span>
               </h2>
-              <Sparkles className="brands-sparkle h-7 w-7 text-[#D4AF37]" style={{ animationDelay: "1s" }} />
+              <Sparkles className="brands-sparkle h-5 w-5 sm:h-7 sm:w-7 text-[#D4AF37]" style={{ animationDelay: "1s" }} />
             </div>
 
             <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-14 bg-gradient-to-r from-transparent to-[#D4AF37]" />
-              <p className="max-w-3xl text-sm italic text-white/52 sm:text-base md:text-xl">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#D4AF37]" />
+              <p className="max-w-3xl text-xs italic text-white/52 sm:text-sm md:text-lg">
                 Les plus grandes marques automobiles a votre service
               </p>
-              <div className="h-px w-14 bg-gradient-to-l from-transparent to-[#D4AF37]" />
+              <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#D4AF37]" />
             </div>
           </div>
 
@@ -273,7 +273,7 @@ export default function BrandsSection() {
               <ChevronRight className="h-7 w-7" strokeWidth={2.8} />
             </button>
 
-            <div className="brands-shell overflow-hidden rounded-[34px] p-4 sm:p-6 lg:p-8">
+            <div className="brands-shell overflow-hidden rounded-[28px] sm:rounded-[34px] p-4 sm:p-6 lg:p-8">
               <div
                 className="flex transition-transform duration-700 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -286,14 +286,16 @@ export default function BrandsSection() {
                         .map((brand) => (
                           <div
                             key={brand.name}
-                            className="brand-card group relative flex min-h-[150px] items-center justify-center rounded-[26px] border border-white/10 bg-gradient-to-b from-zinc-900/90 to-black p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-[#D4AF37]/40 hover:shadow-[0_18px_40px_rgba(0,0,0,0.28)] sm:min-h-[170px] sm:p-8"
+                            className="brand-card group relative flex min-h-[120px] items-center justify-center rounded-[22px] sm:rounded-[26px] border border-white/10 bg-gradient-to-b from-zinc-900/90 to-black p-5 transition-all duration-500 hover:-translate-y-1.5 hover:border-[#D4AF37]/40 hover:shadow-[0_18px_40px_rgba(0,0,0,0.28)] sm:min-h-[170px] sm:p-8"
                           >
                             <div className="pointer-events-none absolute inset-0 rounded-[26px] bg-gradient-to-t from-[#D4AF37]/0 via-transparent to-[#D4AF37]/[0.03] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                            <div className="relative flex h-20 w-full items-center justify-center sm:h-24">
+                            <div className="relative flex h-16 w-full items-center justify-center sm:h-24">
                               <BrandLogo brand={brand} />
                             </div>
                             <div className="absolute bottom-4 left-0 right-0 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#D4AF37]">{brand.name}</p>
+                              <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[#D4AF37]">
+                                {brand.name}
+                              </p>
                             </div>
                           </div>
                         ))}
@@ -303,27 +305,27 @@ export default function BrandsSection() {
               </div>
             </div>
 
-            <div className="mt-6 flex justify-center gap-3 md:hidden">
+            <div className="mt-5 flex justify-center gap-3 md:hidden">
               <button
                 type="button"
                 onClick={prevSlide}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/12 text-[#D4AF37]"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/12 text-[#D4AF37]"
                 aria-label="Voir les marques precedentes"
               >
-                <ChevronLeft className="h-5 w-5" />
+                <ChevronLeft className="h-4 w-4" />
               </button>
               <button
                 type="button"
                 onClick={nextSlide}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/12 text-[#D4AF37]"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/12 text-[#D4AF37]"
                 aria-label="Voir les marques suivantes"
               >
-                <ChevronRight className="h-5 w-5" />
+                <ChevronRight className="h-4 w-4" />
               </button>
             </div>
           </div>
 
-          <div className={`brands-reveal mt-10 flex justify-center gap-3 ${inView ? "in" : ""}`} style={{ transitionDelay: "0.2s" }}>
+          <div className={`brands-reveal mt-8 sm:mt-10 flex justify-center gap-3 ${inView ? "in" : ""}`} style={{ transitionDelay: "0.2s" }}>
             {Array.from({ length: totalPages }).map((_, index) => (
               <button
                 key={index}
@@ -331,15 +333,15 @@ export default function BrandsSection() {
                 onClick={() => setCurrentIndex(index)}
                 className={`rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? "h-3 w-16 bg-gradient-to-r from-[#D4AF37] to-[#f0c75e] shadow-[0_0_22px_rgba(212,175,55,0.45)]"
-                    : "h-3 w-3 bg-white/18 hover:bg-white/28"
+                    ? "h-2.5 w-12 bg-gradient-to-r from-[#D4AF37] to-[#f0c75e] shadow-[0_0_22px_rgba(212,175,55,0.45)] sm:h-3 sm:w-16"
+                    : "h-2.5 w-2.5 bg-white/18 hover:bg-white/28 sm:h-3 sm:w-3"
                 }`}
                 aria-label={`Aller a la page ${index + 1}`}
               />
             ))}
           </div>
 
-          <div className={`brands-reveal mt-14 flex justify-center ${inView ? "in" : ""}`} style={{ transitionDelay: "0.28s" }}>
+          <div className={`brands-reveal mt-10 sm:mt-14 flex justify-center ${inView ? "in" : ""}`} style={{ transitionDelay: "0.28s" }}>
             <div className="relative">
               <div className="h-px w-72 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent sm:w-80" />
               <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D4AF37] shadow-[0_0_18px_rgba(212,175,55,0.55)]" />

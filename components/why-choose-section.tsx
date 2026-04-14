@@ -158,7 +158,7 @@ export default function WhyChooseSection() {
         }
       `}</style>
 
-      <section ref={ref} className="relative overflow-hidden bg-[#070707] py-24 md:py-32">
+      <section ref={ref} className="relative overflow-hidden bg-[#070707] py-16 sm:py-20 md:py-32">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -179,22 +179,24 @@ export default function WhyChooseSection() {
         </svg>
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-16">
-          <div className="mb-14 grid items-end gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="mb-12 sm:mb-14 grid items-end gap-8 lg:gap-10 lg:grid-cols-[1.08fr_0.92fr]">
             <div className="space-y-6">
               <div className={`why-reveal flex items-center gap-3 ${inView ? "in" : ""}`}>
                 <span className="h-px w-9 bg-[#D4AF37]" />
-                <span className="text-[11px] font-medium uppercase tracking-[0.35em] text-[#D4AF37]">Nos Avantages</span>
+                <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.32em] text-[#D4AF37]">
+                  Nos Avantages
+                </span>
               </div>
 
               <div className={`why-reveal space-y-5 ${inView ? "in" : ""}`} style={{ transitionDelay: "0.12s" }}>
-                <h2 className="max-w-4xl font-serif text-4xl font-light leading-[1.04] text-white md:text-5xl lg:text-6xl">
+                <h2 className="max-w-4xl font-serif text-3xl font-light leading-[1.04] text-white sm:text-4xl md:text-5xl lg:text-6xl">
                   Pourquoi choisir
                   <br />
                   <em className="font-semibold italic text-[#D4AF37]">Manhattan Luxe Car</em>
                   <br />
                   pour votre location.
                 </h2>
-                <p className="max-w-2xl text-[15px] leading-7 text-white/55 md:text-base">
+                <p className="max-w-2xl text-xs sm:text-[15px] leading-6 sm:leading-7 text-white/55 md:text-base">
                   Une location plus fluide, plus rapide et plus premium.
                 </p>
               </div>
@@ -211,8 +213,8 @@ export default function WhyChooseSection() {
                 <span>Experience Signature</span>
               </div>
 
-              <div className="mb-3 font-serif text-5xl leading-none text-white sm:text-6xl">4</div>
-              <p className="mb-6 max-w-lg text-sm leading-6 text-white/62 sm:text-[15px]">
+              <div className="mb-3 font-serif text-4xl leading-none text-white sm:text-6xl">4</div>
+              <p className="mb-6 max-w-lg text-xs sm:text-[15px] leading-6 text-white/62">
                 Quatre piliers: excellence, rapidite, flexibilite et detail.
               </p>
 
@@ -220,7 +222,7 @@ export default function WhyChooseSection() {
                 {servicePromises.map((item) => (
                   <div
                     key={item}
-                    className="flex items-center gap-3 rounded-2xl border border-white/8 bg-black/30 px-4 py-4 text-sm text-white/68"
+                    className="flex items-center gap-3 rounded-2xl border border-white/8 bg-black/30 px-4 py-3 text-xs sm:text-sm text-white/68"
                   >
                     <Sparkles className="h-4 w-4 shrink-0 text-[#D4AF37]" />
                     <span>{item}</span>
@@ -230,7 +232,7 @@ export default function WhyChooseSection() {
             </div>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
             {advantages.map((advantage, index) => {
               const Icon = advantage.icon
               const isFeatured = index === 0
@@ -238,34 +240,38 @@ export default function WhyChooseSection() {
               return (
                 <article
                   key={advantage.title}
-                  className={`why-card why-reveal rounded-[28px] p-6 sm:p-7 ${inView ? "in" : ""} ${isFeatured ? "xl:col-span-2" : ""}`}
+                  className={`why-card why-reveal rounded-[26px] p-5 sm:p-7 ${inView ? "in" : ""} ${isFeatured ? "xl:col-span-2" : ""}`}
                   style={{ transitionDelay: `${0.26 + index * 0.08}s` }}
                 >
                   <div className="relative z-10 flex h-full flex-col">
                     <div className="flex items-start justify-between gap-4">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#D4AF37]/18 bg-[#D4AF37]/10">
-                        <Icon className="h-6 w-6 text-[#D4AF37]" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#D4AF37]/18 bg-[#D4AF37]/10 sm:h-14 sm:w-14">
+                        <Icon className="h-5 w-5 text-[#D4AF37] sm:h-6 sm:w-6" />
                       </div>
-                      <span className="text-[11px] font-medium uppercase tracking-[0.3em] text-white/24">
+                      <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.3em] text-white/24">
                         0{index + 1}
                       </span>
                     </div>
 
-                    <div className="mt-6 text-[11px] font-medium uppercase tracking-[0.3em] text-[#D4AF37]/82">
+                    <div className="mt-5 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.28em] text-[#D4AF37]/82">
                       {advantage.eyebrow}
                     </div>
 
                     <h3
-                      className={`mt-3 font-serif leading-tight text-white ${isFeatured ? "max-w-xl text-3xl sm:text-[2rem]" : "text-[1.65rem]"}`}
+                      className={`mt-3 font-serif leading-tight text-white ${
+                        isFeatured ? "max-w-xl text-2xl sm:text-[2rem]" : "text-[1.4rem] sm:text-[1.65rem]"
+                      }`}
                     >
                       {advantage.title}
                     </h3>
 
-                    <p className={`mt-4 text-sm leading-6 text-white/58 sm:text-[15px] ${isFeatured ? "max-w-2xl" : ""}`}>
+                    <p
+                      className={`mt-4 text-xs sm:text-[15px] leading-6 text-white/58 ${isFeatured ? "max-w-2xl" : ""}`}
+                    >
                       {advantage.description}
                     </p>
 
-                    <div className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-3 text-[11px] uppercase tracking-[0.18em] text-white/62">
+                    <div className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/62">
                       <span className="h-1.5 w-1.5 rounded-full bg-[#D4AF37]" />
                       <span>{advantage.note}</span>
                     </div>

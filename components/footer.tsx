@@ -90,19 +90,19 @@ export default function Footer() {
       <div className="pointer-events-none absolute -left-24 top-12 h-72 w-72 rounded-full border border-[#D4AF37]/10" />
       <div className="pointer-events-none absolute -right-16 bottom-12 h-56 w-56 rounded-full border border-[#D4AF37]/10" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 lg:px-16 lg:py-20">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.12fr_0.78fr_0.9fr] lg:gap-10">
           <div className="space-y-6">
-            <div className="flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.34em] text-[#D4AF37]">
+            <div className="flex items-center gap-3 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.32em] text-[#D4AF37]">
               <span className="h-px w-10 bg-[#D4AF37]" />
               <span>Manhattan Luxe Car</span>
             </div>
 
             <div>
-              <h2 className="font-serif text-4xl font-light leading-none text-white md:text-5xl">
+              <h2 className="font-serif text-3xl font-light leading-none text-white sm:text-4xl md:text-5xl">
                 <span className="text-[#D4AF37]">Manhattan</span> Luxe Car
               </h2>
-              <p className="mt-5 max-w-xl text-[15px] leading-8 text-white/58">
+              <p className="mt-4 max-w-xl text-xs sm:text-[15px] leading-7 text-white/58">
                 Location de voitures de prestige au Maroc avec une approche concierge, elegante et rapide du premier
                 message a la remise des cles.
               </p>
@@ -116,7 +116,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.label}
-                  className="footer-social flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/70"
+                  className="footer-social flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/70 sm:h-12 sm:w-12"
                 >
                   <span className="relative z-10">{item.icon}</span>
                 </a>
@@ -127,22 +127,24 @@ export default function Footer() {
               href="https://wa.me/212777441405?text=Bonjour%2C%20je%20souhaite%20reserver%20une%20voiture."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/28 bg-[#D4AF37]/10 px-6 py-4 text-sm font-medium uppercase tracking-[0.16em] text-white transition-all duration-300 hover:border-[#D4AF37]/48 hover:bg-[#D4AF37]/14"
+              className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/28 bg-[#D4AF37]/10 px-5 py-3 text-xs sm:text-sm font-medium uppercase tracking-[0.14em] text-white transition-all duration-300 hover:border-[#D4AF37]/48 hover:bg-[#D4AF37]/14 sm:px-6 sm:py-4"
             >
               <span>Demarrer une reservation</span>
-              <ArrowUpRight className="h-4 w-4 text-[#D4AF37]" />
+              <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#D4AF37]" />
             </a>
           </div>
 
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-1">
             <div>
-              <div className="mb-4 text-[11px] font-medium uppercase tracking-[0.3em] text-[#D4AF37]">Navigation</div>
+              <div className="mb-4 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.28em] text-[#D4AF37]">
+                Navigation
+              </div>
               <div className="space-y-3">
                 {quickLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
-                    className="block text-sm text-white/62 transition-colors duration-300 hover:text-white"
+                    className="block text-xs sm:text-sm text-white/62 transition-colors duration-300 hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -151,10 +153,12 @@ export default function Footer() {
             </div>
 
             <div>
-              <div className="mb-4 text-[11px] font-medium uppercase tracking-[0.3em] text-[#D4AF37]">Experience</div>
+              <div className="mb-4 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.28em] text-[#D4AF37]">
+                Experience
+              </div>
               <div className="space-y-3">
                 {experienceItems.map((item) => (
-                  <div key={item} className="text-sm text-white/62">
+                  <div key={item} className="text-xs sm:text-sm text-white/62">
                     {item}
                   </div>
                 ))}
@@ -162,13 +166,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6 sm:p-8">
-            <div className="mb-4 flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.3em] text-[#D4AF37]">
+          <div className="rounded-[26px] border border-white/10 bg-white/[0.03] p-5 sm:p-8">
+            <div className="mb-4 flex items-center gap-2 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.28em] text-[#D4AF37]">
               <Clock3 className="h-4 w-4" />
               <span>Disponible 24/7</span>
             </div>
 
-            <p className="mb-6 text-sm leading-7 text-white/58">
+            <p className="mb-6 text-xs sm:text-sm leading-6 sm:leading-7 text-white/58">
               Une equipe joignable a tout moment pour confirmer une disponibilite, preparer une livraison ou organiser
               un transfert.
             </p>
@@ -176,29 +180,29 @@ export default function Footer() {
             <div className="space-y-4">
               <a
                 href="tel:+212777441405"
-                className="flex items-start gap-3 rounded-2xl border border-white/8 bg-black/30 px-4 py-4 text-white/78 transition-all duration-300 hover:border-[#D4AF37]/30"
+                className="flex items-start gap-3 rounded-2xl border border-white/8 bg-black/30 px-4 py-3 text-xs sm:text-sm text-white/78 transition-all duration-300 hover:border-[#D4AF37]/30"
               >
-                <Phone className="mt-1 h-5 w-5 shrink-0 text-[#D4AF37]" />
+                <Phone className="mt-1 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-[#D4AF37]" />
                 <span>+212 777 441 405</span>
               </a>
 
               <a
                 href="mailto:manhattanluxecar@outlook.com"
-                className="flex items-start gap-3 rounded-2xl border border-white/8 bg-black/30 px-4 py-4 text-white/78 transition-all duration-300 hover:border-[#D4AF37]/30"
+                className="flex items-start gap-3 rounded-2xl border border-white/8 bg-black/30 px-4 py-3 text-xs sm:text-sm text-white/78 transition-all duration-300 hover:border-[#D4AF37]/30"
               >
-                <Mail className="mt-1 h-5 w-5 shrink-0 text-[#D4AF37]" />
+                <Mail className="mt-1 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-[#D4AF37]" />
                 <span className="break-all">manhattanluxecar@outlook.com</span>
               </a>
 
-              <div className="flex items-start gap-3 rounded-2xl border border-white/8 bg-black/30 px-4 py-4 text-white/78">
-                <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#D4AF37]" />
+              <div className="flex items-start gap-3 rounded-2xl border border-white/8 bg-black/30 px-4 py-3 text-xs sm:text-sm text-white/78">
+                <MapPin className="mt-1 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-[#D4AF37]" />
                 <span>Casablanca, El Jadida et livraisons sur demande</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/45 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-5 text-xs sm:text-sm text-white/45 md:flex-row md:items-center md:justify-between">
           <p>&copy; {currentYear} Manhattan Luxe Car. Tous droits reserves.</p>
           <p>Conditions et confidentialite disponibles sur demande.</p>
         </div>

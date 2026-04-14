@@ -279,7 +279,7 @@ export default function HeroSection() {
         </div>
 
         {/* === MAIN CONTENT === */}
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-16 py-20">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-16 py-16 sm:py-20">
           <div className="grid lg:grid-cols-12 gap-8 items-center min-h-screen lg:min-h-0 pt-20 pb-32 lg:py-0">
 
             {/* Left column — main content */}
@@ -320,7 +320,7 @@ export default function HeroSection() {
                 <h1
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: 'clamp(3rem, 7vw, 6.5rem)',
+                    fontSize: 'clamp(2.4rem, 7vw, 6.2rem)',
                     fontWeight: 300,
                     lineHeight: 1.05,
                     color: '#FFFFFF',
@@ -346,7 +346,7 @@ export default function HeroSection() {
                 <p
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
+                    fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
                     color: 'rgba(255,255,255,0.7)',
                     fontWeight: 300,
                     fontStyle: 'italic',
@@ -365,7 +365,7 @@ export default function HeroSection() {
                 <p
                   style={{
                     fontFamily: "'Jost', sans-serif",
-                    fontSize: '15px',
+                    fontSize: '13px',
                     color: 'rgba(255,255,255,0.5)',
                     fontWeight: 300,
                     lineHeight: 1.8,
@@ -467,8 +467,8 @@ export default function HeroSection() {
                     aria-label={label}
                     className="social-icon"
                     style={{
-                      width: '38px',
-                      height: '38px',
+                      width: '34px',
+                      height: '34px',
                       borderRadius: '50%',
                       background: 'rgba(255,255,255,0.06)',
                       border: '0.5px solid rgba(212,175,55,0.2)',
@@ -507,7 +507,7 @@ export default function HeroSection() {
                       <div
                         style={{
                           fontFamily: "'Cormorant Garamond', serif",
-                          fontSize: 'clamp(1.6rem, 3vw, 2.2rem)',
+                          fontSize: 'clamp(1.4rem, 3vw, 2.1rem)',
                           fontWeight: 600,
                           color: '#D4AF37',
                           lineHeight: 1,
@@ -548,7 +548,7 @@ export default function HeroSection() {
                     key={i}
                     className="flex items-center gap-3"
                     style={{
-                      padding: '10px 14px',
+                      padding: '8px 12px',
                       background: 'rgba(255,255,255,0.03)',
                       border: '0.5px solid rgba(255,255,255,0.08)',
                       borderRadius: '8px',
@@ -558,7 +558,7 @@ export default function HeroSection() {
                     <span style={{ color: '#D4AF37', fontSize: '10px' }}>{icon}</span>
                     <span
                       style={{
-                        fontSize: '12px',
+                        fontSize: '11px',
                         color: 'rgba(255,255,255,0.6)',
                         letterSpacing: '0.03em',
                         fontWeight: 400,

@@ -90,7 +90,7 @@ export default function Header() {
       `}</style>
 
       <header className="fixed inset-x-0 top-0 z-50">
-        <div className="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8 lg:pt-5">
+        <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 lg:pt-5">
           <div
             className={cn(
               "header-shell relative overflow-hidden rounded-[28px] border transition-all duration-500",
@@ -101,17 +101,17 @@ export default function Header() {
           >
             <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
 
-            <div className="relative flex items-center gap-3 px-4 py-3 md:px-6 md:py-4">
+            <div className="relative flex items-center gap-3 px-4 py-2.5 md:px-6 md:py-4">
               <Link href="/" className="min-w-0 flex-1 pr-2">
                 <div className="flex items-center gap-3">
                   <div className="hidden h-10 w-px bg-gradient-to-b from-transparent via-[#D4AF37]/80 to-transparent sm:block" />
                   <div className="min-w-0">
-                    <div className="mb-1 flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.34em] text-[#D4AF37]">
+                    <div className="mb-1 flex items-center gap-2 text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.32em] text-[#D4AF37]">
                       <span>Casablanca</span>
                       <span className="h-1 w-1 rounded-full bg-[#D4AF37]/70" />
                       <span>El Jadida</span>
                     </div>
-                    <h1 className="truncate font-serif text-xl font-semibold tracking-[0.02em] text-white md:text-[1.7rem]">
+                    <h1 className="truncate font-serif text-lg font-semibold tracking-[0.02em] text-white sm:text-xl md:text-[1.6rem]">
                       <span className="text-[#D4AF37]">Manhattan</span> Luxe Car
                     </h1>
                   </div>
@@ -148,22 +148,22 @@ export default function Header() {
                   href="https://wa.me/212777441405?text=Bonjour%2C%20je%20souhaite%20reserver%20une%20voiture."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-5 py-3 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E5C76B] hover:shadow-[0_14px_30px_rgba(212,175,55,0.35)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-4 py-2 text-xs sm:text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E5C76B] hover:shadow-[0_14px_30px_rgba(212,175,55,0.35)] sm:px-5 sm:py-3"
                 >
                   <span>Reserver</span>
-                  <ArrowUpRight className="h-4 w-4" />
+                  <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 </a>
               </div>
 
               <button
                 type="button"
                 onClick={() => setMenuOpen((open) => !open)}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white transition-all duration-300 hover:border-[#D4AF37]/50 hover:text-[#D4AF37] md:hidden"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white transition-all duration-300 hover:border-[#D4AF37]/50 hover:text-[#D4AF37] md:hidden"
                 aria-expanded={menuOpen}
                 aria-controls="mobile-navigation"
                 aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
               >
-                {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
               </button>
             </div>
           </div>

@@ -79,7 +79,7 @@ export default function ServicesSection() {
         .svc-card-inner {
           position: relative;
           z-index: 2;
-          padding: 2.5rem;
+          padding: 2rem;
           height: 100%;
         }
         .svc-card::before {
@@ -98,8 +98,8 @@ export default function ServicesSection() {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 56px;
-          height: 56px;
+          width: 52px;
+          height: 52px;
           border-radius: 50%;
           background: rgba(212,175,55,0.07);
           border: 0.5px solid rgba(212,175,55,0.2);
@@ -125,6 +125,12 @@ export default function ServicesSection() {
           opacity: 1;
           transform: translateX(0);
         }
+
+        @media (max-width: 640px) {
+          .svc-card-inner { padding: 1.5rem; }
+          .svc-icon-ring { width: 46px; height: 46px; }
+          .svc-num { font-size: 32px !important; }
+        }
       `}</style>
 
       <section
@@ -139,9 +145,9 @@ export default function ServicesSection() {
           style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.04) 0%, transparent 60%)' }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-24 lg:py-32">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-16 sm:py-20 lg:py-28">
           {/* Header */}
-          <div className={`svc-reveal ${inView ? 'in' : ''} mb-20`}>
+          <div className={`svc-reveal ${inView ? 'in' : ''} mb-12 sm:mb-16`}>
             <div className="flex items-center gap-3 mb-6">
               <span style={{ display: 'inline-block', width: '36px', height: '0.5px', background: '#D4AF37' }} />
               <span style={{ fontSize: '11px', letterSpacing: '0.35em', color: '#D4AF37', fontWeight: 500, textTransform: 'uppercase' }}>
@@ -151,7 +157,7 @@ export default function ServicesSection() {
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
               <h2 style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 'clamp(2.2rem, 4vw, 3.8rem)',
+                fontSize: 'clamp(2rem, 4vw, 3.5rem)',
                 fontWeight: 300,
                 color: '#fff',
                 letterSpacing: '-0.01em',
@@ -161,7 +167,7 @@ export default function ServicesSection() {
                 Une Expérience{' '}
                 <em style={{ fontStyle: 'italic', fontWeight: 600, color: '#D4AF37' }}>Sur Mesure</em>
               </h2>
-              <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.35)', fontWeight: 300, maxWidth: '280px', lineHeight: 1.8 }}>
+              <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)', fontWeight: 300, maxWidth: '280px', lineHeight: 1.7 }}>
                 Chaque service est conçu pour dépasser vos attentes.
               </p>
             </div>
@@ -178,9 +184,9 @@ export default function ServicesSection() {
                 transitionDelay: '0.1s',
               }}
             >
-              <div className="svc-card-inner flex flex-col md:flex-row md:items-center gap-6">
-                <div className="svc-icon-ring" style={{ width: '64px', height: '64px', background: 'rgba(212,175,55,0.1)' }}>
-                  <Car style={{ width: '26px', height: '26px', color: '#D4AF37', strokeWidth: 1.5 }} />
+              <div className="svc-card-inner flex flex-col md:flex-row md:items-center gap-5">
+                <div className="svc-icon-ring" style={{ width: '56px', height: '56px', background: 'rgba(212,175,55,0.1)' }}>
+                  <Car style={{ width: '22px', height: '22px', color: '#D4AF37', strokeWidth: 1.5 }} />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-3">
@@ -197,14 +203,14 @@ export default function ServicesSection() {
                   </div>
                   <h3 style={{
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: 'clamp(1.4rem, 2.5vw, 2rem)',
+                    fontSize: 'clamp(1.3rem, 2.4vw, 1.9rem)',
                     fontWeight: 600,
                     color: '#fff',
                     marginBottom: '8px',
                   }}>
                     Voitures de luxe &amp; sport
                   </h3>
-                  <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.45)', fontWeight: 300, lineHeight: 1.8, maxWidth: '600px' }}>
+                  <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.45)', fontWeight: 300, lineHeight: 1.7, maxWidth: '600px' }}>
                     Une flotte exclusive de véhicules premium sélectionnés pour toutes vos occasions d'exception.
                     Des berlines de représentation aux supercars — votre choix, notre passion.
                   </p>
